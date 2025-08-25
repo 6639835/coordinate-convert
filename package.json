@@ -10,7 +10,7 @@
     "dev:electron": "wait-on http://localhost:5173 && electron .",
     "build": "npm run build:react && npm run build:electron",
     "build:react": "vite build",
-    "build:electron": "tsc -p tsconfig.electron.json",
+    "build:electron": "npx tsc -p tsconfig.electron.json",
     "pack": "npm run build && electron-builder --dir",
     "dist": "npm run build && electron-builder",
     "dist:win": "npm run build && electron-builder --win",

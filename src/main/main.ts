@@ -14,7 +14,6 @@ function createWindow(): void {
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
-      enableRemoteModule: false,
     },
     titleBarStyle: 'default',
     show: false, // Don't show until ready
@@ -72,19 +71,19 @@ function createMenu(): void {
         { role: 'cut' },
         { role: 'copy' },
         { role: 'paste' },
-        { role: 'selectall' }
+        { role: 'selectAll' }
       ]
     },
     {
       label: 'View',
       submenu: [
         { role: 'reload' },
-        { role: 'forcereload' },
-        { role: 'toggledevtools' },
+        { role: 'forceReload' },
+        { role: 'toggleDevTools' },
         { type: 'separator' },
-        { role: 'resetzoom' },
-        { role: 'zoomin' },
-        { role: 'zoomout' },
+        { role: 'resetZoom' },
+        { role: 'zoomIn' },
+        { role: 'zoomOut' },
         { type: 'separator' },
         { role: 'togglefullscreen' }
       ]
@@ -108,7 +107,7 @@ function createMenu(): void {
         { role: 'services' },
         { type: 'separator' },
         { role: 'hide' },
-        { role: 'hideothers' },
+        { role: 'hideOthers' },
         { role: 'unhide' },
         { type: 'separator' },
         { role: 'quit' }
@@ -149,7 +148,8 @@ app.on('window-all-closed', () => {
 
 // Security: Prevent new window creation
 app.on('web-contents-created', (event, contents) => {
-  contents.on('new-window', (navigationEvent, navigationUrl) => {
-    navigationEvent.preventDefault();
+  contents.setWindowOpenHandler(({ url }) => {
+    // Prevent opening new windows
+    return { action: 'deny' };
   });
 });
