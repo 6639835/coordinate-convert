@@ -47,29 +47,20 @@
       "dist/**/*",
       "node_modules/**/*"
     ],
-    "extraResources": [
-      {
-        "from": "build/",
-        "to": ".",
-        "filter": ["**/*"]
-      }
-    ],
+
     "mac": {
       "category": "public.app-category.utilities",
       "target": [
         {
           "target": "dmg",
           "arch": ["x64", "arm64"]
-        },
-        {
-          "target": "zip",
-          "arch": ["x64", "arm64"]
         }
       ],
       "darkModeSupport": true,
       "hardenedRuntime": false,
       "gatekeeperAssess": false,
-      "identity": null
+      "identity": null,
+      "type": "distribution"
     },
     "win": {
       "target": [

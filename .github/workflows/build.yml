@@ -47,7 +47,6 @@ jobs:
         name: macos-distributables
         path: |
           release/*.dmg
-          release/*.zip
           
     - name: Upload artifacts (Windows)
       if: matrix.os == 'windows-latest'

@@ -78,6 +78,26 @@ git push origin v1.0.0
 ```
 3. GitHub Actions will automatically build and create a release
 
+### Installation
+
+#### macOS
+1. Download the `.dmg` file from the latest release
+2. Open the DMG and drag "Coordinate Converter" to Applications
+3. If macOS blocks the app with "damaged or modified" error:
+   ```bash
+   # Option 1: Use the provided fix script
+   ./fix-macos-app.sh
+   
+   # Option 2: Manual fix
+   sudo xattr -rd com.apple.quarantine "/Applications/Coordinate Converter.app"
+   ```
+4. Open the app from Applications or Launchpad
+
+#### Windows
+1. Download the `.exe` installer from the latest release
+2. Run the installer and follow the setup wizard
+3. Launch from Start Menu or Desktop shortcut
+
 ## ⌨️ Keyboard Shortcuts
 
 - **Enter**: Convert coordinates

@@ -102,3 +102,6 @@ jspm_packages/
 app/
 build/icon.ico
 build/background.png
+
+# macOS fix script (generated for local use)
+fix-macos-app.sh
