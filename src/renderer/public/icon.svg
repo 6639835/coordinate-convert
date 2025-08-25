@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="128" cy="128" r="120" fill="url(#grad1)" />
+  
+  <!-- Globe lines -->
+  <circle cx="128" cy="128" r="80" fill="none" stroke="white" stroke-width="3" opacity="0.8"/>
+  <ellipse cx="128" cy="128" rx="80" ry="40" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+  <ellipse cx="128" cy="128" rx="40" ry="80" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+  <line x1="48" y1="128" x2="208" y2="128" stroke="white" stroke-width="2" opacity="0.6"/>
+  <line x1="128" y1="48" x2="128" y2="208" stroke="white" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Compass points -->
+  <text x="128" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">N</text>
+  <text x="221" y="133" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">E</text>
+  <text x="128" y="225" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">S</text>
+  <text x="35" y="133" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">W</text>
+  
+  <!-- Coordinate markers -->
+  <circle cx="108" cy="98" r="4" fill="#FFD700" stroke="white" stroke-width="2"/>
+  <circle cx="148" cy="158" r="4" fill="#FFD700" stroke="white" stroke-width="2"/>
+  
+  <!-- Degree symbol -->
+  <circle cx="160" cy="80" r="8" fill="none" stroke="#FFD700" stroke-width="2"/>
+</svg>
