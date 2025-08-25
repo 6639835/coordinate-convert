@@ -60,6 +60,10 @@
         {
           "target": "dmg",
           "arch": ["x64", "arm64"]
+        },
+        {
+          "target": "zip",
+          "arch": ["x64", "arm64"]
         }
       ],
       "darkModeSupport": true,
@@ -94,25 +98,7 @@
       "createStartMenuShortcut": true
     },
     "dmg": {
-      "title": "Coordinate Converter",
-      "backgroundColor": "#667eea",
-      "window": {
-        "width": 540,
-        "height": 380
-      },
-      "contents": [
-        {
-          "x": 140,
-          "y": 200,
-          "type": "file"
-        },
-        {
-          "x": 400,
-          "y": 200,
-          "type": "link",
-          "path": "/Applications"
-        }
-      ]
+      "title": "Coordinate Converter"
     }
   }
 }
